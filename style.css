@@ -1,0 +1,206 @@
+/* Halcyon Mail — the small site behind the app's required links.
+ *
+ * One stylesheet, no framework, no fonts to download, no scripts at all. The Microsoft Store
+ * requires a privacy policy at a live URL, and a page that has to load three third-party things
+ * before it renders is a page that eventually 404s during certification.
+ */
+
+:root {
+  --accent: #007aff;
+  --ink: #1d1d1f;
+  --ink-2: #4a4a4f;
+  --ink-3: #86868b;
+  --bg: #ffffff;
+  --bg-2: #f5f5f7;
+  --rule: #d2d2d7;
+  --measure: 42rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --accent: #0a84ff;
+    --ink: #f5f5f7;
+    --ink-2: #c7c7cc;
+    --ink-3: #8e8e93;
+    --bg: #161618;
+    --bg-2: #1f1f22;
+    --rule: #38383c;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0 1.5rem 6rem;
+  color: var(--ink);
+  background: var(--bg);
+  font-family:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI Variable Text', 'Segoe UI', system-ui, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  max-width: var(--measure);
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  gap: 0.9rem;
+  align-items: center;
+  padding: 2.5rem 0 1.75rem;
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+header img {
+  width: 44px;
+  height: 44px;
+}
+
+header .name {
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+header .tag {
+  color: var(--ink-3);
+  font-size: 0.95rem;
+}
+
+h1 {
+  margin: 0 0 0.5rem;
+  font-size: 2.1rem;
+  font-weight: 650;
+  line-height: 1.15;
+  letter-spacing: -0.022em;
+}
+
+h2 {
+  margin: 2.75rem 0 0.75rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: -0.012em;
+}
+
+h3 {
+  margin: 2rem 0 0.5rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.lede {
+  margin-bottom: 2rem;
+  color: var(--ink-2);
+  font-size: 1.15rem;
+}
+
+.stamp {
+  margin: 0 0 2.5rem;
+  color: var(--ink-3);
+  font-size: 0.9rem;
+}
+
+p,
+li {
+  color: var(--ink-2);
+}
+
+strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+a {
+  color: var(--accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+/* The one thing a reader should be able to find in five seconds. */
+.headline {
+  padding: 1.25rem 1.4rem;
+  margin: 2rem 0;
+  background: var(--bg-2);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 8px 8px 0;
+}
+
+.headline p {
+  margin: 0;
+  color: var(--ink);
+}
+
+table {
+  width: 100%;
+  margin: 1.25rem 0 2rem;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+th,
+td {
+  padding: 0.6rem 0.8rem 0.6rem 0;
+  color: var(--ink-2);
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--rule);
+}
+
+th {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+code {
+  padding: 0.1em 0.35em;
+  font-family: ui-monospace, 'Cascadia Mono', Consolas, monospace;
+  font-size: 0.88em;
+  background: var(--bg-2);
+  border-radius: 4px;
+}
+
+/* Wide content must scroll inside itself rather than pushing the page sideways on a phone. */
+.scroll {
+  overflow-x: auto;
+}
+
+footer {
+  padding-top: 1.5rem;
+  margin-top: 4rem;
+  color: var(--ink-3);
+  font-size: 0.9rem;
+  border-top: 1px solid var(--rule);
+}
+
+footer a {
+  margin-right: 1.25rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.card {
+  padding: 1.25rem;
+  background: var(--bg-2);
+  border-radius: 10px;
+}
+
+.card h3 {
+  margin: 0 0 0.35rem;
+}
+
+.card p {
+  margin: 0;
+  font-size: 0.95rem;
+}

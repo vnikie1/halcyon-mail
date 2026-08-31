@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Reporting a security problem — Halcyon Mail</title>
+    <meta
+      name="description"
+      content="How to report a security vulnerability in Halcyon Mail, what is in scope, and what happens next."
+    />
+    <link rel="icon" href="icon.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <img src="icon.png" alt="" />
+        <div>
+          <div class="name"><a href="./" style="color: inherit; text-decoration: none">Halcyon Mail</a></div>
+          <div class="tag">A desktop email client for Windows 11</div>
+        </div>
+      </header>
+
+      <h1>Reporting a security problem</h1>
+
+      <p class="lede">
+        Halcyon holds people&rsquo;s entire private correspondence and their mail passwords. A
+        vulnerability here is serious, and a report about one is welcome &mdash; including one that
+        shows something claimed in the <a href="privacy.html">privacy policy</a> is not true.
+      </p>
+
+      <div class="headline">
+        <p>
+          Email <a href="mailto:vnikie1@gmail.com?subject=SECURITY">vnikie1@gmail.com</a> with
+          <strong>SECURITY</strong> in the subject line, or open a
+          <a href="https://github.com/vnikie1/MailBox/security/advisories/new">GitHub security
+          advisory</a>, which stays private until published.
+        </p>
+      </div>
+
+      <p>
+        <strong>Please do not open a public issue for a security problem</strong>, and please do not
+        post a working exploit publicly before there is a fix. Everything else &mdash; partial
+        findings, uncertain findings, &ldquo;this looks wrong but I could not exploit it&rdquo;
+        &mdash; is worth sending.
+      </p>
+
+      <p>Useful in a report, though none of it is required:</p>
+
+      <ul>
+        <li>What an attacker could do, and what they would need to start with.</li>
+        <li>The version, from <strong>Settings &rarr; Advanced</strong>, and your Windows version.</li>
+        <li>Steps to reproduce, or a message file that triggers it.</li>
+        <li>Whether you would like to be credited, and under what name.</li>
+      </ul>
+
+      <h2>What happens next</h2>
+
+      <p>
+        This is a one-person project, so these are honest commitments rather than an enterprise
+        service agreement:
+      </p>
+
+      <div class="scroll">
+        <table>
+          <tbody>
+            <tr>
+              <td>Acknowledgement</td>
+              <td>Within 3 days</td>
+            </tr>
+            <tr>
+              <td>An assessment, and whether it will be fixed</td>
+              <td>Within 14 days</td>
+            </tr>
+            <tr>
+              <td>Fix for a serious issue</td>
+              <td>As fast as it can be built, tested and signed</td>
+            </tr>
+            <tr>
+              <td>Public disclosure</td>
+              <td>After a fix ships, or 90 days, whichever comes first &mdash; sooner if you prefer</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+        You will be credited by name unless you would rather not be. There is no bounty programme;
+        there is no money in this project to fund one.
+      </p>
+
+      <h2>What is in scope</h2>
+
+      <p>
+        Anything in <a href="https://github.com/vnikie1/MailBox">the repository</a>, and anything an
+        installed copy of Halcyon does. The parts most worth your attention:
+      </p>
+
+      <ul>
+        <li>
+          <strong>Message rendering.</strong> Bodies are hostile input. They are sanitised in the
+          Rust core and shown in a sandboxed frame that should not be able to run script, reach the
+          filesystem, call the application&rsquo;s own commands, or make a network request before
+          the user allows images. A way around any of that is a real finding.
+        </li>
+        <li>
+          <strong>Credential handling.</strong> Passwords and OAuth tokens should exist only in
+          Windows Credential Manager. Finding one in the database, a log, a crash report, an error
+          message or a temporary file is a real finding.
+        </li>
+        <li>
+          <strong>The IPC surface.</strong> The web layer can only call the commands listed in
+          <code>capabilities/default.json</code>. A way to reach anything beyond that list &mdash;
+          or to make a command act on a file or account it was not given &mdash; is a real finding.
+        </li>
+        <li>
+          <strong>Transport.</strong> Certificate validation must be on for every public host, with
+          no way for a user or a server to turn it off. Anything that downgrades or bypasses TLS is
+          a real finding.
+        </li>
+        <li>
+          <strong>Import and update paths.</strong> A crafted mbox file, <code>.eml</code> file,
+          <code>.pst</code> file or update manifest that reads or writes outside the directories it
+          was given, or that gets code to run, is a real finding.
+        </li>
+      </ul>
+
+      <h2>What is out of scope</h2>
+
+      <ul>
+        <li>
+          Anything requiring an attacker who already has your Windows account. Halcyon does not
+          defend against that and does not claim to.
+        </li>
+        <li>
+          The mail database being unencrypted at rest. Known, documented, and true of every desktop
+          mail client.
+        </li>
+        <li>
+          Vulnerabilities in Windows, WebView2, or a dependency &mdash; report those upstream. If a
+          dependency advisory affects Halcyon specifically, do tell us.
+        </li>
+        <li>
+          Spam, phishing or malware that arrives <em>in</em> mail. That is your provider&rsquo;s
+          filtering and your own judgement; Halcyon renders it safely, it does not adjudicate it.
+        </li>
+        <li>
+          Reports produced by an automated scanner with no demonstration that anything is actually
+          reachable.
+        </li>
+      </ul>
+
+      <h2>Supported versions</h2>
+
+      <p>
+        The current release only. Halcyon updates in place, so &ldquo;upgrade&rdquo; is the fix for
+        everything.
+      </p>
+
+      <footer>
+        <a href="./">Home</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="security.html">Security</a>
+        <a href="https://github.com/vnikie1/MailBox">Source</a>
+      </footer>
+    </div>
+  </body>
+</html>

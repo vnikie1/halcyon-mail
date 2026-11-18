@@ -22,7 +22,7 @@
       </header>
 
       <h1>Privacy policy</h1>
-      <p class="stamp">Version 1.2 &middot; Last updated 3 October 2026</p>
+      <p class="stamp">Version 1.3 &middot; Last updated 18 November 2026</p>
 
       <p class="lede">
         Halcyon is a mail client that runs on your computer. It has no server, no account, and no
@@ -108,7 +108,9 @@
         <table>
           <tbody>
             <tr>
-              <td>Your mail, its attachments, and the search index</td>
+              <td>
+                Your mail, its attachments, the search index, and what the junk filter has learned
+              </td>
               <td><code>%LOCALAPPDATA%\com.uniki.halcyon</code></td>
             </tr>
             <tr>
@@ -151,21 +153,55 @@
       </p>
 
       <p>
-        Halcyon uses it for what a mail client does, at your direction: downloading your mail to
-        your computer so that you can read and search it, sending what you write, and moving,
-        flagging and deleting messages when you ask. What it receives from Google is stored only on
-        your computer, in the places listed above, with the sign-in token in Windows Credential
-        Manager.
+        <strong>What it accesses.</strong> Your Gmail messages &mdash; their headers, bodies and
+        attachments &mdash; the names of your labels and mailboxes, each message&rsquo;s flags
+        (read, starred, and so on), and your account&rsquo;s email address. Nothing else in your
+        Google Account: not your contacts, calendar, files or profile.
       </p>
 
       <p>
-        Halcyon does not send Google user data to us or to anyone else &mdash; none of it reaches
-        us, so no one here can read it &mdash; does not use it for advertising, and does not use it
-        to develop, improve or train artificial-intelligence or machine-learning models. You can
-        withdraw Halcyon&rsquo;s access at any time at
-        <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>. To
-        delete what it has stored, delete the folders listed above; the uninstaller offers to do it
-        for you.
+        <strong>How it uses it.</strong> For what a mail client does, at your direction: downloading
+        your mail to your computer so that you can read and search it, sending what you write, and
+        moving, flagging and deleting messages when you ask. The junk filter also learns from the
+        messages you mark, as described below.
+      </p>
+
+      <p>
+        <strong>Who it is shared with.</strong> No one. What Halcyon receives from Google is stored
+        only on your computer, in the places listed above; mail you send goes to Google&rsquo;s mail
+        server and on to the recipients you chose. Halcyon does not send Google user data to us or
+        to anyone else &mdash; none of it reaches us, so no one here can read it &mdash; and does not
+        sell it or use it for advertising.
+      </p>
+
+      <p>
+        <strong>How it is protected.</strong> Every connection to Google is encrypted. The sign-in
+        token is held by Windows Credential Manager, protected by your Windows account, and is never
+        written to the database, a file or a log. The mail database itself is not encrypted, as
+        described above.
+      </p>
+
+      <p id="retention">
+        <strong>How long it is kept, and how it is deleted.</strong> Your mail stays on your
+        computer for as long as the account is in Halcyon, and follows what is on Gmail: a message
+        deleted there is deleted here at the next sync. Removing the account
+        (<strong>Settings &rarr; Accounts</strong>) deletes that account&rsquo;s stored mail, its
+        search entries and its sign-in token from your computer. Uninstalling the Microsoft Store
+        version removes the data Windows keeps for it; removing your accounts first, or deleting the
+        folders listed above, makes certain nothing is left. You can also withdraw Halcyon&rsquo;s
+        access at any time at
+        <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>,
+        which stops the stored token working.
+      </p>
+
+      <p id="machine-learning">
+        <strong>Machine learning.</strong> Halcyon&rsquo;s junk filter is a small statistical
+        classifier. It learns only from the messages you mark as junk or not junk, it runs on your
+        computer, and it is used only to sort your own mail. What it learns &mdash; counts of words
+        &mdash; is kept in the mail database on your computer, is never sent anywhere, and is
+        deleted with Halcyon&rsquo;s data. Halcyon does not use Google user data to develop, improve
+        or train any other artificial-intelligence or machine-learning model, and sends none of it
+        to any AI service.
       </p>
 
       <p>
@@ -242,8 +278,8 @@
 
       <p>
         Because we hold no data about you, there is nothing for us to disclose, correct, export or
-        delete. Deleting your data means deleting the folders listed above, and the uninstaller
-        offers to do it for you.
+        delete. Deleting your data means removing your accounts in Halcyon or deleting the folders
+        listed above; the downloadable installer&rsquo;s uninstaller offers to do it for you.
       </p>
 
       <p>

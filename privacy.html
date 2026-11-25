@@ -22,7 +22,7 @@
       </header>
 
       <h1>Privacy policy</h1>
-      <p class="stamp">Version 1.3 &middot; Last updated 18 November 2026</p>
+      <p class="stamp">Version 1.4 &middot; Last updated 25 November 2026</p>
 
       <p class="lede">
         Halcyon is a mail client that runs on your computer. It has no server, no account, and no
@@ -152,6 +152,15 @@
         one and no other, because it is the only one Google&rsquo;s IMAP and SMTP servers accept.
       </p>
 
+      <p id="app-password">
+        <strong>With an app password instead.</strong> A Google account can also be added with an
+        app password, which you create in your Google Account and paste into Halcyon. That way
+        nothing is asked of Google on Halcyon&rsquo;s behalf: there is no permission screen, and the
+        app password is what lets Halcyon reach your mail. What Halcyon accesses, how it uses it,
+        who it is shared with and how long it is kept are the same either way, and are set out
+        below.
+      </p>
+
       <p>
         <strong>What it accesses.</strong> Your Gmail messages &mdash; their headers, bodies and
         attachments &mdash; the names of your labels and mailboxes, each message&rsquo;s flags
@@ -176,9 +185,9 @@
 
       <p>
         <strong>How it is protected.</strong> Every connection to Google is encrypted. The sign-in
-        token is held by Windows Credential Manager, protected by your Windows account, and is never
-        written to the database, a file or a log. The mail database itself is not encrypted, as
-        described above.
+        token, or the app password, is held by Windows Credential Manager, protected by your Windows
+        account, and is never written to the database, a file or a log. The mail database itself is
+        not encrypted, as described above.
       </p>
 
       <p id="retention">
@@ -186,12 +195,14 @@
         computer for as long as the account is in Halcyon, and follows what is on Gmail: a message
         deleted there is deleted here at the next sync. Removing the account
         (<strong>Settings &rarr; Accounts</strong>) deletes that account&rsquo;s stored mail, its
-        search entries and its sign-in token from your computer. Uninstalling the Microsoft Store
-        version removes the data Windows keeps for it; removing your accounts first, or deleting the
-        folders listed above, makes certain nothing is left. You can also withdraw Halcyon&rsquo;s
-        access at any time at
+        search entries and its sign-in token or app password from your computer. Uninstalling the
+        Microsoft Store version removes the data Windows keeps for it; removing your accounts first,
+        or deleting the folders listed above, makes certain nothing is left. You can also withdraw
+        Halcyon&rsquo;s access at any time at
         <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>,
-        which stops the stored token working.
+        which stops the stored token working, or, for an account added with an app password, by
+        deleting that password at
+        <a href="https://myaccount.google.com/apppasswords">myaccount.google.com/apppasswords</a>.
       </p>
 
       <p id="machine-learning">

@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Adding a Gmail account — Halcyon Mail</title>
+    <meta
+      name="description"
+      content="The two ways to add a Google account to Halcyon Mail: signing in with Google in your browser, and an app password. What Google's warning means and what to press."
+    />
+    <link rel="icon" href="icon.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <img src="icon.png" alt="" />
+        <div>
+          <div class="name"><a href="./" style="color: inherit; text-decoration: none">Halcyon Mail</a></div>
+          <div class="tag">A desktop email client for Windows 11</div>
+        </div>
+      </header>
+
+      <h1>Adding a Gmail account</h1>
+      <p class="stamp">Last updated 26 November 2026</p>
+
+      <p class="lede">
+        There are two ways to add a Google account to Halcyon. Both do the same job, and neither
+        sends your mail or your password to us.
+      </p>
+
+      <h2>Which one to use</h2>
+
+      <ul>
+        <li>
+          <strong><a href="#browser">Sign in with Google</a>, in your browser.</strong> The quicker
+          of the two. Google shows a warning first, which is explained below, and lets only a
+          limited number of people sign in this way.
+        </li>
+        <li>
+          <strong><a href="#app-password">An app password.</a></strong> About two minutes. There is
+          no warning and no limit. Your Google account needs 2-Step Verification.
+        </li>
+      </ul>
+
+      <p>If the first does not work for you, use the second.</p>
+
+      <h2 id="browser">Sign in with Google</h2>
+
+      <ol class="steps">
+        <li>
+          In Halcyon, choose <strong>Google</strong> and press <strong>Continue</strong>. Type your
+          name and your Gmail address, and press <strong>Continue</strong> again.
+        </li>
+        <li>
+          Halcyon shows a page called <strong>Before You Sign In to Google</strong>, which says what
+          is about to happen. Press <strong>Continue to Google</strong>. Your browser opens on
+          Google&rsquo;s sign-in page.
+        </li>
+        <li>Choose your Google account, and sign in if Google asks you to.</li>
+        <li>
+          Google shows a page headed <span class="shown">Google hasn&rsquo;t verified this app</span>.
+          Click <strong>Advanced</strong>.
+        </li>
+        <li>Click <strong>Go to Halcyon (unsafe)</strong>.</li>
+        <li>
+          Google asks whether Halcyon may read, compose, send and permanently delete your email.
+          That is what a mail client does. Click <strong>Continue</strong>.
+        </li>
+        <li>Go back to Halcyon. It finishes by itself, and your mail starts to arrive.</li>
+      </ol>
+
+      <h3 id="warning">Why Google shows that warning</h3>
+
+      <p>
+        Google reviews every app that reads Gmail, and the review ends with a security audit by an
+        outside firm, which the developer pays for again every year. Halcyon is free, and has
+        not bought one. So Google has not verified it, and says so to everyone who
+        signs in. The word &ldquo;unsafe&rdquo; is on that link for every app Google has not
+        verified.
+      </p>
+
+      <p>What you can check for yourself:</p>
+
+      <ul>
+        <li>
+          The <a href="https://github.com/vnikie1/MailBox">source code</a> is public, so anyone can
+          read what Halcyon does with the access.
+        </li>
+        <li>
+          The <a href="privacy.html#google">privacy policy</a> says what it does: your mail is
+          downloaded to your computer and stays there. None of it is sent to us.
+        </li>
+        <li>
+          You can take the access away at any time at
+          <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.
+        </li>
+      </ul>
+
+      <h3 id="error">If Google shows an error instead</h3>
+
+      <p>
+        Google lets only 100 people sign in to an app it has not verified, counted over the whole
+        life of the app. Once that number is reached, Google shows an error page where the sign-in
+        should be. Nothing is wrong with your account.
+      </p>
+
+      <p>
+        Go back to Halcyon and press <strong>Cancel</strong>. It then shows the steps for an app
+        password, which has no such limit.
+      </p>
+
+      <h2 id="app-password">Use an app password</h2>
+
+      <p>
+        An app password is a 16-letter password that Google makes for one app. It is not your Google
+        password, and you can delete it whenever you like.
+      </p>
+
+      <ol class="steps">
+        <li>
+          Turn on 2-Step Verification, if it is not on already. Open
+          <a href="https://myaccount.google.com/signinoptions/twosv">2-Step Verification in your
+          Google Account</a> and follow Google&rsquo;s steps. Google only makes app passwords for
+          accounts that have it.
+        </li>
+        <li>
+          Open
+          <a href="https://myaccount.google.com/apppasswords">App passwords in your Google
+          Account</a>. Name the new one <strong>Halcyon</strong> and create it. Google shows 16
+          letters.
+        </li>
+        <li>
+          In Halcyon, choose <strong>Google</strong> and press <strong>Continue</strong>. Type your
+          name and your Gmail address, and press <strong>Continue</strong> again.
+        </li>
+        <li>
+          On <strong>Before You Sign In to Google</strong>, press
+          <strong>Use an App Password Instead</strong>.
+        </li>
+        <li>
+          Paste the 16 letters into <strong>App Password</strong> and press
+          <strong>Continue</strong>. The spaces do not matter.
+        </li>
+        <li>
+          Halcyon checks the connection and shows <strong>Account Ready</strong>. Press
+          <strong>Add Account</strong>.
+        </li>
+      </ol>
+
+      <h3 id="unavailable">If Google has no app passwords page for you</h3>
+
+      <p>Google does not offer app passwords when:</p>
+
+      <ul>
+        <li>2-Step Verification is off. Step 1 above turns it on.</li>
+        <li>2-Step Verification is set up with a security key and nothing else.</li>
+        <li>The account belongs to a workplace or school that has turned app passwords off.</li>
+        <li>The account has Advanced Protection.</li>
+      </ul>
+
+      <p>
+        In the last three cases, try <a href="#browser">signing in with Google</a> in your browser
+        instead.
+      </p>
+
+      <h2 id="remove">Taking the access away</h2>
+
+      <ul>
+        <li>
+          <strong>If you signed in with Google:</strong> remove Halcyon at
+          <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.
+        </li>
+        <li>
+          <strong>If you used an app password:</strong> delete it at
+          <a href="https://myaccount.google.com/apppasswords">myaccount.google.com/apppasswords</a>.
+        </li>
+        <li>
+          <strong>In Halcyon:</strong> removing the account under
+          <strong>Settings &rarr; Accounts</strong> deletes its mail and its saved sign-in from your
+          computer.
+        </li>
+      </ul>
+
+      <p class="stamp">
+        This page describes Halcyon 1.0.3 and later. Version 1.0.2 has no
+        <strong>Before You Sign In to Google</strong> page: the browser opens as soon as you
+        continue from your address, and <strong>Use an App Password Instead</strong> is on that
+        address step, which is also where <strong>Cancel</strong> returns you.
+      </p>
+
+      <h2>Contact</h2>
+
+      <p>
+        Stuck on any of this? Write to
+        <a href="mailto:vnikie1@gmail.com">vnikie1@gmail.com</a>.
+      </p>
+
+      <footer>
+        <a href="./">Home</a>
+        <a href="gmail.html">Gmail</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="security.html">Security</a>
+        <a href="https://github.com/vnikie1/MailBox">Source</a>
+      </footer>
+    </div>
+  </body>
+</html>

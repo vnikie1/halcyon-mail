@@ -166,6 +166,20 @@ code {
   border-radius: 4px;
 }
 
+/* Words that are on somebody else's screen, quoted so that they are recognised there. */
+.shown {
+  padding: 0.1em 0.45em;
+  color: var(--ink);
+  font-weight: 600;
+  background: var(--bg-2);
+  border-radius: 4px;
+}
+
+/* A list of things to do in order. Room between them, since each is a sentence or two. */
+.steps li + li {
+  margin-top: 0.6rem;
+}
+
 /* Wide content must scroll inside itself rather than pushing the page sideways on a phone. */
 .scroll {
   overflow-x: auto;

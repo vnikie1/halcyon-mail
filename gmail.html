@@ -6,7 +6,7 @@
     <title>Adding a Gmail account — Halcyon Mail</title>
     <meta
       name="description"
-      content="The two ways to add a Google account to Halcyon Mail: signing in with Google in your browser, and an app password. What Google's warning means and what to press."
+      content="The two ways to add a Google account to Halcyon Mail, step by step with pictures: signing in with Google in your browser, and an app password."
     />
     <link rel="icon" href="icon.png" />
     <link rel="stylesheet" href="style.css" />
@@ -45,6 +45,13 @@
 
       <p>If the first does not work for you, use the second.</p>
 
+      <p class="stamp">
+        The pictures of Google&rsquo;s pages are drawings, not photographs, so that nobody&rsquo;s
+        account is in them. The thing to press is ringed. Halcyon shows you the same pictures as you
+        go, so you do not need to keep this page open. Google changes its pages from time to time;
+        the words to look for stay the same.
+      </p>
+
       <h2 id="browser">Sign in with Google</h2>
 
       <ol class="steps">
@@ -53,19 +60,77 @@
           name and your Gmail address, and press <strong>Continue</strong> again.
         </li>
         <li>
-          Halcyon shows a page called <strong>Before You Sign In to Google</strong>, which says what
-          is about to happen. Press <strong>Continue to Google</strong>. Your browser opens on
-          Google&rsquo;s sign-in page.
+          Halcyon shows a page called <strong>Before You Sign In to Google</strong>. It goes through
+          Google&rsquo;s screens one at a time, the same four as below. Press
+          <strong>Next</strong> through them, then <strong>Continue to Google</strong>. Your browser
+          opens.
+          <picture>
+            <source srcset="img/halcyon-before-you-sign-in-dark.png" media="(prefers-color-scheme: dark)" />
+            <img
+              class="shot sheet"
+              src="img/halcyon-before-you-sign-in-light.png"
+              width="1040" height="1168"
+              loading="lazy"
+              alt="Halcyon&rsquo;s page Before You Sign In to Google, on step 2 of 4, showing a drawing of Google&rsquo;s warning with the Advanced link ringed. Next is at the bottom right."
+            />
+          </picture>
         </li>
-        <li>Choose your Google account, and sign in if Google asks you to.</li>
+        <li>
+          Check that the address begins <strong>accounts.google.com</strong>. Choose your Google
+          account, or sign in, if Google asks. If you are already signed in, Google may skip this.
+          <picture>
+            <source srcset="img/google-account-dark.png" media="(prefers-color-scheme: dark)" />
+            <img
+              class="shot screen"
+              src="img/google-account-light.png"
+              width="960" height="456"
+              loading="lazy"
+              alt="A browser on accounts.google.com, with the address ringed. The page reads Choose an account, to continue to Halcyon."
+            />
+          </picture>
+        </li>
         <li>
           Google shows a page headed <span class="shown">Google hasn&rsquo;t verified this app</span>.
-          Click <strong>Advanced</strong>.
+          Click <strong>Advanced</strong>, the small link on the left. Not
+          <strong>BACK TO SAFETY</strong>, which takes you away again.
+          <picture>
+            <source srcset="img/google-warning-dark.png" media="(prefers-color-scheme: dark)" />
+            <img
+              class="shot screen"
+              src="img/google-warning-light.png"
+              width="960" height="456"
+              loading="lazy"
+              alt="Google&rsquo;s page headed Google hasn&rsquo;t verified this app, under a red warning sign. The small Advanced link at the bottom left is ringed. BACK TO SAFETY is a button on the right."
+            />
+          </picture>
         </li>
-        <li>Click <strong>Go to Halcyon (unsafe)</strong>.</li>
+        <li>
+          More of the page opens. Click <strong>Go to Halcyon (unsafe)</strong>, at the bottom.
+          <picture>
+            <source srcset="img/google-advanced-dark.png" media="(prefers-color-scheme: dark)" />
+            <img
+              class="shot screen"
+              src="img/google-advanced-light.png"
+              width="960" height="456"
+              loading="lazy"
+              alt="The same page with Advanced open. The link Go to Halcyon (unsafe), at the bottom left, is ringed."
+            />
+          </picture>
+        </li>
         <li>
           Google asks whether Halcyon may read, compose, send and permanently delete your email.
-          That is what a mail client does. Click <strong>Continue</strong>.
+          That is what a mail client does. Click <strong>Continue</strong>, at the foot of the
+          page. You may need to scroll down to see it.
+          <picture>
+            <source srcset="img/google-consent-dark.png" media="(prefers-color-scheme: dark)" />
+            <img
+              class="shot screen"
+              src="img/google-consent-light.png"
+              width="960" height="456"
+              loading="lazy"
+              alt="Google&rsquo;s page headed Halcyon wants access to your Google Account. On the right it lists Read, compose, send and permanently delete all your email from Gmail. Of the two buttons at the foot, Cancel and Continue, Continue is ringed."
+            />
+          </picture>
         </li>
         <li>Go back to Halcyon. It finishes by itself, and your mail starts to arrive.</li>
       </ol>
@@ -74,10 +139,9 @@
 
       <p>
         Google reviews every app that reads Gmail, and the review ends with a security audit by an
-        outside firm, which the developer pays for again every year. Halcyon is free, and has
-        not bought one. So Google has not verified it, and says so to everyone who
-        signs in. The word &ldquo;unsafe&rdquo; is on that link for every app Google has not
-        verified.
+        outside firm, which the developer pays for again every year. Halcyon is free, and has not
+        bought one. So Google has not verified it, and says so to everyone who signs in. The word
+        &ldquo;unsafe&rdquo; is on that link for every app Google has not verified.
       </p>
 
       <p>What you can check for yourself:</p>
@@ -123,12 +187,44 @@
           <a href="https://myaccount.google.com/signinoptions/twosv">2-Step Verification in your
           Google Account</a> and follow Google&rsquo;s steps. Google only makes app passwords for
           accounts that have it.
+          <picture>
+            <source srcset="img/google-two-step-dark.png" media="(prefers-color-scheme: dark)" />
+            <img
+              class="shot screen"
+              src="img/google-two-step-light.png"
+              width="960" height="456"
+              loading="lazy"
+              alt="Google&rsquo;s 2-Step Verification page on myaccount.google.com. The button Turn on 2-Step Verification is ringed."
+            />
+          </picture>
         </li>
         <li>
           Open
           <a href="https://myaccount.google.com/apppasswords">App passwords in your Google
-          Account</a>. Name the new one <strong>Halcyon</strong> and create it. Google shows 16
-          letters.
+          Account</a>. Type <strong>Halcyon</strong> as the name and press <strong>Create</strong>.
+          <picture>
+            <source srcset="img/google-app-password-create-dark.png" media="(prefers-color-scheme: dark)" />
+            <img
+              class="shot screen"
+              src="img/google-app-password-create-light.png"
+              width="960" height="456"
+              loading="lazy"
+              alt="Google&rsquo;s App passwords page. The App name box holds the word Halcyon, and the Create button beside it is ringed."
+            />
+          </picture>
+        </li>
+        <li>
+          Google shows 16 letters, and shows them only once. Copy them.
+          <picture>
+            <source srcset="img/google-app-password-shown-dark.png" media="(prefers-color-scheme: dark)" />
+            <img
+              class="shot screen"
+              src="img/google-app-password-shown-light.png"
+              width="960" height="456"
+              loading="lazy"
+              alt="Google&rsquo;s box headed Generated app password. Sixteen letters in four groups are ringed: abcd efgh ijkl mnop, which is an example."
+            />
+          </picture>
         </li>
         <li>
           In Halcyon, choose <strong>Google</strong> and press <strong>Continue</strong>. Type your
@@ -136,11 +232,22 @@
         </li>
         <li>
           On <strong>Before You Sign In to Google</strong>, press
-          <strong>Use an App Password Instead</strong>.
+          <strong>Use an App Password Instead</strong>. Halcyon goes through the three steps above.
+          Since you have done them, press <strong>I Already Have One</strong>.
         </li>
         <li>
           Paste the 16 letters into <strong>App Password</strong> and press
           <strong>Continue</strong>. The spaces do not matter.
+          <picture>
+            <source srcset="img/halcyon-app-password-dark.png" media="(prefers-color-scheme: dark)" />
+            <img
+              class="shot sheet"
+              src="img/halcyon-app-password-light.png"
+              width="1040" height="1168"
+              loading="lazy"
+              alt="Halcyon&rsquo;s page Sign In with an App Password, on its last step: Paste the 16 letters here, above a box labelled App Password. Continue is at the bottom right."
+            />
+          </picture>
         </li>
         <li>
           Halcyon checks the connection and shows <strong>Account Ready</strong>. Press
@@ -184,9 +291,9 @@
 
       <p class="stamp">
         This page describes Halcyon 1.0.3 and later. Version 1.0.2 has no
-        <strong>Before You Sign In to Google</strong> page: the browser opens as soon as you
-        continue from your address, and <strong>Use an App Password Instead</strong> is on that
-        address step, which is also where <strong>Cancel</strong> returns you.
+        <strong>Before You Sign In to Google</strong> page and no pictures: the browser opens as
+        soon as you continue from your address, and <strong>Use an App Password Instead</strong> is
+        on that address step, which is also where <strong>Cancel</strong> returns you.
       </p>
 
       <h2>Contact</h2>

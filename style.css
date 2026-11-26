@@ -180,6 +180,28 @@ code {
   margin-top: 0.6rem;
 }
 
+/* A picture of the screen a step is about, under the step. Drawn at twice this size, so it is
+   sharp on any display, and never wider than the column on a phone. */
+.shot {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0.9rem 0 1.4rem;
+}
+
+/* One of Google's pages: the size it has in Halcyon itself. */
+.shot.screen {
+  max-width: 480px;
+}
+
+/* A whole step of Halcyon's assistant, which is taller than it is wide. Smaller, so that it
+   does not push the step after it off the screen. */
+.shot.sheet {
+  max-width: 380px;
+  border: 1px solid var(--rule);
+  border-radius: 14px;
+}
+
 /* Wide content must scroll inside itself rather than pushing the page sideways on a phone. */
 .scroll {
   overflow-x: auto;
